@@ -20,7 +20,7 @@ const TimeTable = ({ events, handleCellClick, handleDelete }) => {
               const index =
                 daysOfWeek.indexOf(day) * timesInDay.length +
                 timesInDay.indexOf(time);
-              const event = events[index]
+              const event = events[index];
               return (
                 <td
                   key={`${day}-${time}`}
@@ -28,11 +28,16 @@ const TimeTable = ({ events, handleCellClick, handleDelete }) => {
                   onClick={() => handleCellClick(day, time)}
                 >
                   {event ? (
-                      <div>
-                        {event.event}
-                        <button className={"delete-button"} onClick={(event) => handleDelete(event, index)}>X</button>
-                      </div>
-                    ) : null}
+                    <div>
+                      {event.event}
+                      <button
+                        className="delete-button"
+                        onClick={(event) => handleDelete(event, index)}
+                      >
+                        X
+                      </button>
+                    </div>
+                  ) : null}
                 </td>
               );
             })}

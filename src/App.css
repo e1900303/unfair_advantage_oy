@@ -9,6 +9,7 @@
   border: 1px solid black;
   padding: 8px;
   text-align: center;
+  position: relative;
 }
 
 .table th:first-child,
@@ -45,11 +46,13 @@
   padding: 4px 8px;
 }
 
-.delete-button {
-  
-}
-
 .event-marked-cell {
   background-color: green;
   color: white;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

@@ -18,12 +18,12 @@ function App() {
     setShowForm(true);
   };
 
-  function handleCloseForm() {
+  const handleCloseForm = () => {
     setSelectedCellIndex(-1);
     setShowForm(false);
     setNewEvent("");
     setNewHours("");
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
